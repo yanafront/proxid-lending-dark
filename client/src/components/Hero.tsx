@@ -91,7 +91,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto pa-4 sm:px-6 lg:px-8 text-center"
+        className="relative z-10 max-w-7xl mx-auto py-8 lg:py-4 px-4 sm:px-6 lg:px-8 text-center"
         style={{ y, opacity, scale }}
       >
         <motion.div
