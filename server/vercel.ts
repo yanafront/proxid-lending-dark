@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve static files
+// Serve static files from client/dist
 app.use(express.static(path.join(process.cwd(), "client", "dist")));
 
 // Catch-all route for SPA
