@@ -17,6 +17,4 @@ drizzle.config.ts
 vite.config.local.ts
 package-lock.json
 package.json
-# client/src/ - НЕ ИСКЛЮЧАТЬ! Нужен для сборки
-# client/tsconfig*.json - НЕ ИСКЛЮЧАТЬ! Нужен для сборки  
-# client/vite.config.ts - НЕ ИСКЛЮЧАТЬ! Нужен для сборки
+# client/ - ВКЛЮЧЕН полностью для сборки
