@@ -9,6 +9,6 @@ node_modules
 coverage
 .vscode
 *.md
-src/
-tsconfig*.json
-vite.config.ts
+# src/ - НЕ ИСКЛЮЧАТЬ! Нужен для сборки
+# tsconfig*.json - НЕ ИСКЛЮЧАТЬ! Нужен для сборки
+# vite.config.ts - НЕ ИСКЛЮЧАТЬ! Нужен для сборки
