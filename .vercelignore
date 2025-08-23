@@ -6,15 +6,10 @@ node_modules
 .env
 .env.local
 .env.production
-dist
-build
-coverage
 .vscode
-*.md
 server/
 shared/
 drizzle.config.ts
 vite.config.local.ts
 package-lock.json
 package.json
-# client/ - ВКЛЮЧЕН полностью для сборки
