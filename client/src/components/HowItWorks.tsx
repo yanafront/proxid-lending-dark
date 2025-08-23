@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 
@@ -48,54 +49,26 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {steps.slice(0, 3).map((step, index) => (
-            <div key={index} className="flex items-center">
-              {/* Step */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="text-center flex-1"
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow`}
+                style={{ animationDelay: `${index * 0.5}s` }}
               >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow`}
-                  style={{ animationDelay: `${index * 0.5}s` }}
-                >
-                  <span className="text-2xl font-bold">{step.number}</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-400 text-sm">{step.description}</p>
-              </motion.div>
-
-              {/* Arrow */}
-              {index < 2 && (
-                <div className="hidden md:flex items-center justify-center px-4">
-                  <ChevronRight className="w-8 h-8 text-gray-600" />
-                </div>
-              )}
-            </div>
+                <span className="text-2xl font-bold">{step.number}</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+              <p className="text-gray-400 text-sm">{step.description}</p>
+            </motion.div>
           ))}
         </div>
-
-        {/* Step 4 - Centered */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-          data-testid="step-4"
-        >
-          <div
-            className={`w-16 h-16 bg-gradient-to-br ${steps[3].gradient} rounded-2xl flex items-center justify-center mx-auto mb-4 animate-glow`}
-            style={{ animationDelay: "1.5s" }}
-          >
-            <span className="text-2xl font-bold">{steps[3].number}</span>
-          </div>
-          <h3 className="text-lg font-semibold mb-2">{steps[3].title}</h3>
-          <p className="text-gray-400 text-sm">{steps[3].description}</p>
-        </motion.div>
       </div>
     </section>
   );

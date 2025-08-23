@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Check, Star } from "lucide-react";
@@ -10,7 +11,7 @@ const plans = [
     description: "Для стажёров",
     features: [
       "Базовый профиль",
-      "5 свайпов в день",
+      "30 свайпов в день",
       "Базовые фильтры",
     ],
     buttonText: "Начать бесплатно",
@@ -58,10 +59,10 @@ export default function Pricing() {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["50px", "-50px"]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [5, -5]);
-  
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -72,7 +73,7 @@ export default function Pricing() {
   return (
     <section ref={ref} id="pricing" className="py-20 relative" style={{ perspective: "1000px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +83,7 @@ export default function Pricing() {
           >
             Убираем барьер <span className="text-gradient">входа</span>
           </motion.h2>
-        </div>
+        </div> */}
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
@@ -90,8 +91,8 @@ export default function Pricing() {
               key={index}
               initial={{ opacity: 0, y: 30, rotateY: -15 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              whileHover={{ 
-                scale: 1.05, 
+              whileHover={{
+                scale: 1.05,
                 rotateY: plan.popular ? 0 : (index === 0 ? 5 : -5),
                 transition: { duration: 0.3 }
               }}

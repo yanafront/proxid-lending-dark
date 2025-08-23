@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { TrendingDown, Clock, DollarSign, AlertTriangle } from "lucide-react";

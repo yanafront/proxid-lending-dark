@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Rocket, Flame } from "lucide-react";
@@ -15,7 +16,7 @@ export default function Hero() {
     target: ref,
     offset: ["start start", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
@@ -89,7 +90,7 @@ export default function Hero() {
         />
       </div>
 
-      <motion.div 
+      <motion.div
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         style={{ y, opacity, scale }}
       >
@@ -99,38 +100,41 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight font-grotesque">
-            Хватит сливать деньги на{" "}
-            <span className="text-gradient block">HR — найми сотрудников</span>
-            <span className="text-3xl md:text-5xl lg:text-6xl">за 3 клика</span>
+            <span className="text-gradient block"><span>Мы соединяем - <br /> ты выбираешь</span></span>
+
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light">
-            ProxiD — AI-платформа, которая подбирает людей и проекты{" "}
-            <strong className="text-white">быстрее, чем hh.ru</strong> и{" "}
-            <strong className="text-white">дешевле, чем рекрутеры</strong>
+            Платформа обмена талантами на базе ИИ,<br /> где работа и кандидаты находит тебя.<br/>{" "}
+            Свайпай, знакомься, собирай команду,<br/> находи работу мечты <strong>за минуты</strong>, а не месяцы.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <motion.button
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("pricing")}
+              href="https://t.me/proxiDBot"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow flex items-center space-x-2"
               data-testid="button-find-employees"
             >
               <Rocket className="w-5 h-5" />
               <span>Найти сотрудников</span>
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("pricing")}
+              href="https://t.me/proxiDBot"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center space-x-2"
               data-testid="button-find-project"
+              style={{background: '#000000c4'}}
             >
               <Flame className="w-5 h-5" />
               <span>Найти проект</span>
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Animated Swipe Demo */}

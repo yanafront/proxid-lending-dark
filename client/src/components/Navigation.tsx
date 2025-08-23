@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -54,18 +55,19 @@ export default function Navigation() {
               Преимущества
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
+              onClick={() => scrollToSection("cta")}
               className="text-gray-300 hover:text-white transition-colors"
-              data-testid="nav-pricing"
+              data-testid="nav-contacts"
             >
-              Тарифы
+              Контакты
             </button>
-            <button
-              className="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition-all btn-glow"
-              data-testid="button-login"
-            >
-              Войти
-            </button>
+            {/*<button*/}
+            {/*  onClick={() => scrollToSection("pricing")}*/}
+            {/*  className="text-gray-300 hover:text-white transition-colors"*/}
+            {/*  data-testid="nav-pricing"*/}
+            {/*>*/}
+            {/*  Тарифы*/}
+            {/*</button>*/}
           </div>
 
           <button
@@ -102,17 +104,18 @@ export default function Navigation() {
               Преимущества
             </button>
             <button
+              onClick={() => scrollToSection("cta")}
+              className="block px-3 py-2 text-gray-300 hover:text-white transition-colors w-full text-left"
+              data-testid="mobile-nav-contacts"
+            >
+              Контакты
+            </button>
+            <button
               onClick={() => scrollToSection("pricing")}
               className="block px-3 py-2 text-gray-300 hover:text-white transition-colors w-full text-left"
               data-testid="mobile-nav-pricing"
             >
               Тарифы
-            </button>
-            <button
-              className="block w-full text-left px-3 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-all btn-glow mt-4"
-              data-testid="mobile-button-login"
-            >
-              Войти
             </button>
           </div>
         </motion.div>

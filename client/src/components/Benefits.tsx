@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Clock, DollarSign, Tag, Unlock, Rocket, TrendingUp, Timer } from "lucide-react";
@@ -6,11 +7,11 @@ const businessBenefits = [
   {
     icon: Clock,
     title: "Подбор быстрее на 60%",
-    description: "Вместо 2 месяцев — 2 недели",
+            description: "Вместо 2 месяцев - 2 недели",
   },
   {
     icon: DollarSign,
-    title: "Экономия до $20K в год",
+    title: "Экономия от 500$",
     description: "На HR-агентствах и рекрутинге",
   },
   {
@@ -20,7 +21,7 @@ const businessBenefits = [
   },
   {
     icon: Unlock,
-    title: "Временные специалисты",
+    title: "Временные сотрудники",
     description: "Доступ в пару кликов",
   },
 ];
@@ -49,11 +50,11 @@ export default function Benefits() {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   const leftX = useTransform(scrollYProgress, [0, 1], ["-100px", "100px"]);
   const rightX = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [10, -10]);
-  
+
   return (
     <section ref={ref} id="benefits" className="py-20 relative" style={{ perspective: "1200px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,7 +133,7 @@ export default function Benefits() {
               <div className="text-center">
                 <div className="text-lg font-semibold text-green-400">💡 Триггер</div>
                 <div className="text-sm text-gray-300 mt-2">
-                  "Ты не теряешь деньги — ты их экономишь прямо сейчас"
+                  "Ты не теряешь деньги - ты их экономишь прямо сейчас"
                 </div>
               </div>
             </div>

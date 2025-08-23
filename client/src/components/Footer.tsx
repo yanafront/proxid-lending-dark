@@ -1,27 +1,14 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { Twitter, Linkedin } from "lucide-react";
-
-const productLinks = [
-  "Для бизнеса",
-  "Для специалистов", 
-  "API",
-  "Интеграции",
-];
-
-const supportLinks = [
-  "Помощь",
-  "Документация",
-  "Блог",
-  "Контакты",
-];
+import { MessageCircle, Bot } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Logo and Description */}
-          <div className="md:col-span-2">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -36,93 +23,55 @@ export default function Footer() {
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 AI-платформа для быстрого и эффективного подбора персонала.
-                Найм как Tinder, но с искусственным интеллектом.
+                Найм как Tinder, но для поиска работы и кандидатов.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-blue-600 px-6 py-3 rounded-md hover:bg-blue-700 transition-all btn-glow"
-                data-testid="button-partnership"
-              >
-                Подать заявку на сотрудничество
-              </motion.button>
             </motion.div>
           </div>
 
-          {/* Product Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="font-semibold mb-4">Продукт</h4>
-            <ul className="space-y-2 text-gray-400">
-              {productLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                    data-testid={`footer-product-${index}`}
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Support Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="font-semibold mb-4">Поддержка</h4>
-            <ul className="space-y-2 text-gray-400">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors"
-                    data-testid={`footer-support-${index}`}
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          {/* Contact Links */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-semibold mb-4">Связаться с нами</h4>
+              <div className="space-y-4">
+                <a
+                  href="https://t.me/yanadubeshko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group"
+                >
+                  <MessageCircle className="w-5 h-5 group-hover:text-blue-400" />
+                  <span>Партнерам</span>
+                </a>
+                <a
+                  href="https://t.me/proxiDBot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group"
+                >
+                  <Bot className="w-5 h-5 group-hover:text-blue-400" />
+                  <span>Бот ProxiD</span>
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
-        {/* Social Links */}
+        {/* Copyright */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-8 pt-8 flex justify-between items-center"
+          className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
           <p className="text-gray-400 text-sm">
-            © 2024 ProxiD. Все права защищены.
+            © {new Date().getFullYear()} ProxiD. Все права защищены.
           </p>
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-              data-testid="link-twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white transition-colors"
-              data-testid="link-linkedin"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-          </div>
         </motion.div>
       </div>
     </footer>

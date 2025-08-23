@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Rocket, Zap, AlertTriangle } from "lucide-react";
@@ -32,7 +33,7 @@ export default function FinalCTA() {
           className="glass-effect rounded-lg p-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-grotesque">
-            🔥 ProxiD — найм, который{" "}
+            🔥 ProxiD - найм, который{" "}
             <span className="text-gradient">не тормозит</span>
           </h2>
 
@@ -41,25 +42,30 @@ export default function FinalCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <motion.button
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("pricing")}
+              href="https://t.me/proxiDBot"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow transform hover:scale-105 flex items-center space-x-2"
               data-testid="button-register-free"
             >
               <Rocket className="w-5 h-5" />
               <span>Зарегистрироваться бесплатно</span>
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              href="https://t.me/proxiDBot"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center space-x-2"
               data-testid="button-request-demo"
             >
               <Zap className="w-5 h-5" />
               <span>Запросить демо для бизнеса</span>
-            </motion.button>
+            </motion.a>
           </div>
 
           <motion.div
