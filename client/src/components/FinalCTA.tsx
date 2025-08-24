@@ -9,10 +9,10 @@ export default function FinalCTA() {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1.1]);
   const rotateY = useTransform(scrollYProgress, [0, 1], [-10, 10]);
-  
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +21,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section ref={ref} id="cta" className="py-20 relative" style={{ perspective: "1200px" }}>
+    <section ref={ref} id="cta" className="py-8 lg:py-20 relative" style={{ perspective: "1200px" }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotateX: 15 }}
@@ -41,14 +41,14 @@ export default function FinalCTA() {
             Мы дешевле Upwork и умнее hh.ru
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="https://t.me/proxiDBot"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow transform hover:scale-105 flex items-center space-x-2"
+              className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow transform hover:scale-105 flex items-center justify-center space-x-2 w-full sm:w-auto"
               data-testid="button-register-free"
             >
               <Rocket className="w-5 h-5" />
@@ -60,7 +60,7 @@ export default function FinalCTA() {
               href="https://t.me/proxiDBot"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center space-x-2"
+              className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center justify-center space-x-2 w-full sm:w-auto"
               data-testid="button-request-demo"
             >
               <Zap className="w-5 h-5" />
