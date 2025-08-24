@@ -8,6 +8,7 @@ import HowItWorks from "../components/HowItWorks";
 // import SocialProof from "../components/SocialProof";
 // import Pricing from "../components/Pricing";
 import FinalCTA from "../components/FinalCTA";
+import PrivacyPolicy from "../components/PrivacyPolicy";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -32,6 +33,9 @@ export default function Home() {
         <div className="flex flex-col lg:space-x-8 lg:space-y-0 space-y-8 px-4 lg:px-0">
           {/* <Pricing /> */}
           <FinalCTA />
+        </div>
+        <div className="w-full px-4 lg:px-0">
+          <PrivacyPolicy />
         </div>
       </div>
       <div className="w-full px-4 lg:px-0 max-w-7xl mx-auto">

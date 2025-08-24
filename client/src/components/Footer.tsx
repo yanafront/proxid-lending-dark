@@ -69,9 +69,21 @@ export default function Footer() {
           viewport={{ once: true }}
           className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} ProxiD. Все права защищены.
-          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} ProxiD. Все права защищены.
+            </p>
+            <a
+              href="#privacy"
+              className="text-gray-400 hover:text-white text-sm underline transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('privacy')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Пользовательское соглашение
+            </a>
+          </div>
         </motion.div>
       </div>
     </footer>

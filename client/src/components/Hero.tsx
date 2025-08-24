@@ -91,7 +91,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-center"
+        className="relative z-10 max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-center sm:text-center text-left"
         style={{ y, opacity, scale }}
       >
         <motion.div
@@ -99,24 +99,24 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight font-grotesque mt-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight font-grotesque mt-8 text-left sm:text-center">
             <span className="text-gradient block"><span>Мы соединяем - <br /> ты выбираешь</span></span>
 
           </h1>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light text-left sm:text-center">
             Платформа обмена талантами на базе ИИ,<br /> где работа и кандидаты находит тебя.<br/>{" "}
             Свайпай, знакомься, собирай команду,<br/> находи работу мечты <strong>за минуты</strong>, а не месяцы.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-center items-stretch sm:items-center mb-12">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="https://t.me/proxiDBot"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow flex items-center space-x-2"
+              className="bg-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all btn-glow flex items-center justify-center space-x-2 w-full sm:w-auto"
               data-testid="button-find-employees"
             >
               <Rocket className="w-5 h-5" />
@@ -128,7 +128,7 @@ export default function Hero() {
               href="https://t.me/proxiDBot"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center space-x-2"
+              className="glass-effect px-8 py-4 rounded-md text-lg font-semibold hover:bg-white/10 transition-all card-hover flex items-center justify-center space-x-2 w-full sm:w-auto"
               data-testid="button-find-project"
               style={{background: '#000000c4'}}
             >

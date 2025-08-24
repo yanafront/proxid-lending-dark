@@ -58,13 +58,13 @@ export default function Benefits() {
   return (
     <section ref={ref} id="benefits" className="py-20 relative" style={{ perspective: "1200px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center sm:text-center text-left mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-grotesque"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-grotesque text-left sm:text-center"
           >
             Выгоды, которые{" "}
             <span className="text-gradient">нельзя игнорировать</span>
@@ -82,7 +82,7 @@ export default function Benefits() {
             style={{ x: leftX, rotateX, transformStyle: "preserve-3d" }}
             className="glass-effect rounded-lg p-8 card-hover"
           >
-            <h3 className="text-2xl font-bold mb-6 text-blue-500">Для бизнеса</h3>
+            <h3 className="text-2xl font-bold mb-6 text-blue-500 text-left sm:text-center">Для бизнеса</h3>
             <div className="space-y-6">
               {businessBenefits.map((benefit, index) => {
                 const Icon = benefit.icon;
@@ -111,7 +111,7 @@ export default function Benefits() {
             style={{ x: rightX, rotateX, transformStyle: "preserve-3d" }}
             className="glass-effect rounded-lg p-8 card-hover"
           >
-            <h3 className="text-2xl font-bold mb-6 text-white">Для специалистов</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white text-left sm:text-center">Для специалистов</h3>
             <div className="space-y-6">
               {specialistBenefits.map((benefit, index) => {
                 const Icon = benefit.icon;
@@ -130,7 +130,7 @@ export default function Benefits() {
             </div>
 
             <div className="bg-blue-500/10 rounded-lg p-4 mt-6">
-              <div className="text-center">
+              <div className="text-center sm:text-center text-left">
                 <div className="text-lg font-semibold text-green-400">💡 Триггер</div>
                 <div className="text-sm text-gray-300 mt-2">
                   "Ты не теряешь деньги - ты их экономишь прямо сейчас"
