@@ -4,10 +4,12 @@ import { Shield, CheckCircle, ExternalLink } from "lucide-react";
 
 export default function ConsentBlock() {
   const [hasConsented, setHasConsented] = useState(false);
+  const [showConsentBlock, setShowConsentBlock] = useState(true);
 
   const handleConsent = () => {
     setHasConsented(true);
-    // Здесь можно добавить логику для сохранения согласия в localStorage или отправки на сервер
+    setShowConsentBlock(false);
+    // Сохраняем согласие в localStorage
     localStorage.setItem('privacy-consent', 'true');
     localStorage.setItem('consent-date', new Date().toISOString());
   };
@@ -17,14 +19,22 @@ export default function ConsentBlock() {
     const consent = localStorage.getItem('privacy-consent');
     if (consent === 'true') {
       setHasConsented(true);
+      setShowConsentBlock(false);
     }
   }, []);
 
+  // Если согласие уже дано, не показываем блок
+  if (!showConsentBlock) {
+    return null;
+  }
+
+  // Если согласие только что получено, показываем подтверждение один раз
   if (hasConsented) {
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
         className="fixed bottom-0 left-0 right-0 bg-green-500/10 border-t border-green-500/20 p-4 text-center z-50"
       >
         <div className="flex items-center justify-center space-x-2 text-green-400 mb-2">
@@ -32,7 +42,7 @@ export default function ConsentBlock() {
           <span className="font-semibold">Согласие получено</span>
         </div>
         <p className="text-gray-300 text-sm">
-          Вы уже согласились с обработкой персональных данных. 
+          Спасибо! Вы согласились с обработкой персональных данных. 
           <a 
             href="/privacy" 
             className="text-blue-400 hover:text-blue-300 underline ml-1"
@@ -40,6 +50,15 @@ export default function ConsentBlock() {
             Просмотреть политику
           </a>
         </p>
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+          onClick={() => setShowConsentBlock(false)}
+          className="mt-3 text-gray-400 hover:text-white text-sm underline"
+        >
+          Скрыть
+        </motion.button>
       </motion.div>
     );
   }
