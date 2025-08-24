@@ -40,12 +40,12 @@ export default function PainPoints() {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [15, -15]);
-  
+
   return (
-    <section ref={ref} id="pain" className="py-20 relative" style={{ perspective: "1000px" }}>
+    <section ref={ref} id="pain" className="py-8 lg:py-20 relative" style={{ perspective: "1000px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -66,8 +66,8 @@ export default function PainPoints() {
               key={index}
               initial={{ opacity: 0, y: 30, rotateY: -15 }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 rotateY: 5,
                 scale: 1.02,
                 transition: { duration: 0.3 }

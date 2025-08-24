@@ -42,13 +42,13 @@ export default function Solution() {
     target: ref,
     offset: ["start end", "end start"]
   });
-  
+
   const leftY = useTransform(scrollYProgress, [0, 1], ["-50px", "50px"]);
   const rightY = useTransform(scrollYProgress, [0, 1], ["50px", "-50px"]);
   const rotateY = useTransform(scrollYProgress, [0, 1], [-10, 10]);
-  
+
   return (
-    <section ref={ref} id="solution" className="py-20 relative" style={{ perspective: "1200px" }}>
+    <section ref={ref} id="solution" className="py-8 lg:py-20 relative" style={{ perspective: "1200px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2

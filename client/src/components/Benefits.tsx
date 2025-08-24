@@ -56,7 +56,7 @@ export default function Benefits() {
   const rotateX = useTransform(scrollYProgress, [0, 1], [10, -10]);
 
   return (
-    <section ref={ref} id="benefits" className="py-20 relative" style={{ perspective: "1200px" }}>
+    <section ref={ref} id="benefits" className="py-8 lg:py-20 relative" style={{ perspective: "1200px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center sm:text-center text-left mb-16">
           <motion.h2

@@ -30,7 +30,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           style={{ scale, rotateY, transformStyle: "preserve-3d" }}
-          className="glass-effect rounded-lg p-12"
+          className="glass-effect rounded-lg p-4 lg:p-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-grotesque">
             🔥 ProxiD - найм, который{" "}
