@@ -13,13 +13,14 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden pb-32">
       <Navigation />
       <div className="flex flex-col space-y-8 max-w-7xl mx-auto">
         <div className="w-full px-4 lg:px-0">
           <Hero />
         </div>
         <div className="flex flex-col lg:space-x-8 lg:space-y-0 space-y-8 px-4 lg:px-0">
+          {/* <Pricing /> */}
           <PainPoints />
           <Solution />
         </div>
@@ -34,13 +35,11 @@ export default function Home() {
           {/* <Pricing /> */}
           <FinalCTA />
         </div>
-        <div className="w-full px-4 lg:px-0">
-          <ConsentBlock />
-        </div>
       </div>
       <div className="w-full px-4 lg:px-0 max-w-7xl mx-auto">
         <Footer />
       </div>
+      <ConsentBlock />
     </div>
   );
 }

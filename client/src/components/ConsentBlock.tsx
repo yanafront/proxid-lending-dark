@@ -25,7 +25,7 @@ export default function ConsentBlock() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-green-500/10 border border-green-500/20 rounded-lg p-6 text-center"
+        className="fixed bottom-0 left-0 right-0 bg-green-500/10 border-t border-green-500/20 p-4 text-center z-50"
       >
         <div className="flex items-center justify-center space-x-2 text-green-400 mb-2">
           <CheckCircle className="w-5 h-5" />
@@ -48,46 +48,48 @@ export default function ConsentBlock() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6"
+      className="fixed bottom-0 left-0 right-0 bg-blue-500/10 border-t border-blue-500/20 p-4 z-50"
     >
-      <div className="flex items-start space-x-3 mb-4">
-        <Shield className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-blue-400 mb-2">
-            Обработка персональных данных
-          </h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Для использования сервиса ProxiD необходимо согласие на обработку персональных данных. 
-            Мы собираем и обрабатываем ваши данные в соответствии с законодательством Республики Беларусь 
-            и нашей политикой конфиденциальности.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={handleConsent}
-              className="bg-blue-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-blue-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
-            >
-              <CheckCircle className="w-4 h-4" />
-              <span>Согласен с обработкой данных</span>
-            </motion.button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-start space-x-3 mb-3">
+          <Shield className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-blue-400 mb-2">
+              Обработка персональных данных
+            </h3>
+            <p className="text-gray-300 text-sm mb-3">
+              Для использования сервиса ProxiD необходимо согласие на обработку персональных данных. 
+              Мы собираем и обрабатываем ваши данные в соответствии с законодательством Республики Беларусь 
+              и нашей политикой конфиденциальности.
+            </p>
             
-            <a
-              href="/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-gray-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
-            >
-              <ExternalLink className="w-4 h-4" />
-              <span>Читать политику</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleConsent}
+                className="bg-blue-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-blue-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
+              >
+                <CheckCircle className="w-4 h-4" />
+                <span>Согласен с обработкой данных</span>
+              </motion.button>
+              
+              <a
+                href="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-gray-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>Читать политику</span>
+              </a>
+            </div>
+            
+            <p className="text-gray-400 text-xs mt-2">
+              Нажимая «Согласен», вы принимаете нашу политику конфиденциальности и даете согласие 
+              на обработку персональных данных в соответствии с Законом РБ «О защите персональных данных».
+            </p>
           </div>
-          
-          <p className="text-gray-400 text-xs mt-3">
-            Нажимая «Согласен», вы принимаете нашу политику конфиденциальности и даете согласие 
-            на обработку персональных данных в соответствии с Законом РБ «О защите персональных данных».
-          </p>
         </div>
       </div>
     </motion.div>
