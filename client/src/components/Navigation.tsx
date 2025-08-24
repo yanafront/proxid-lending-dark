@@ -86,6 +86,7 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
+          style={{ background: '#000000d9' }}
           className="md:hidden glass-effect border-t border-white/10"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -110,13 +111,13 @@ export default function Navigation() {
             >
               Контакты
             </button>
-            <button
-              onClick={() => scrollToSection("pricing")}
-              className="block px-3 py-2 text-gray-300 hover:text-white transition-colors w-full text-left"
-              data-testid="mobile-nav-pricing"
-            >
-              Тарифы
-            </button>
+            {/*<button*/}
+            {/*  onClick={() => scrollToSection("pricing")}*/}
+            {/*  className="block px-3 py-2 text-gray-300 hover:text-white transition-colors w-full text-left"*/}
+            {/*  data-testid="mobile-nav-pricing"*/}
+            {/*>*/}
+            {/*  Тарифы*/}
+            {/*</button>*/}
           </div>
         </motion.div>
       )}
