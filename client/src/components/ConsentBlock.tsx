@@ -42,9 +42,9 @@ export default function ConsentBlock() {
           <span className="font-semibold">Согласие получено</span>
         </div>
         <p className="text-gray-300 text-sm">
-          Спасибо! Вы согласились с обработкой персональных данных. 
-          <a 
-            href="/privacy" 
+          Спасибо! Вы согласились с обработкой персональных данных.
+          <a
+            href="/privacy"
             className="text-blue-400 hover:text-blue-300 underline ml-1"
           >
             Просмотреть политику
@@ -67,7 +67,7 @@ export default function ConsentBlock() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-0 left-0 right-0 bg-blue-600/90 border-t border-blue-500 p-3 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-gray-600 p-3 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-start space-x-3 mb-2">
@@ -77,11 +77,9 @@ export default function ConsentBlock() {
               Обработка персональных данных
             </h3>
             <p className="text-blue-100 text-sm mb-2">
-              Для использования сервиса ProxiD необходимо согласие на обработку персональных данных. 
-              Мы собираем и обрабатываем ваши данные в соответствии с законодательством Республики Беларусь 
-              и нашей политикой конфиденциальности.
+              Для использования сервиса необходимо согласие на обработку персональных данных.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -92,7 +90,7 @@ export default function ConsentBlock() {
                 <CheckCircle className="w-4 h-4" />
                 <span>Согласен с обработкой данных</span>
               </motion.button>
-              
+
               <a
                 href="/privacy"
                 target="_blank"
@@ -103,9 +101,9 @@ export default function ConsentBlock() {
                 <span>Читать политику</span>
               </a>
             </div>
-            
+
             <p className="text-blue-200 text-xs mt-2">
-              Нажимая «Согласен», вы принимаете нашу политику конфиденциальности и даете согласие 
+              Нажимая «Согласен», вы принимаете нашу политику конфиденциальности и даете согласие
               на обработку персональных данных в соответствии с Законом РБ «О защите персональных данных».
             </p>
           </div>
