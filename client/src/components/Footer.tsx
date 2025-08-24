@@ -74,12 +74,8 @@ export default function Footer() {
               © {new Date().getFullYear()} ProxiD. Все права защищены.
             </p>
             <a
-              href="#privacy"
+              href="/privacy"
               className="text-gray-400 hover:text-white text-sm underline transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('privacy')?.scrollIntoView({ behavior: 'smooth' });
-              }}
             >
               Пользовательское соглашение
             </a>

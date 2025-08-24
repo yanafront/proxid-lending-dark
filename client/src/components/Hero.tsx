@@ -104,7 +104,7 @@ export default function Hero() {
 
           </h1>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light text-left sm:text-center">
+          <p className="text-md md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light text-left sm:text-center">
             Платформа обмена талантами на базе ИИ,<br /> где работа и кандидаты находит тебя.<br/>{" "}
             Свайпай, знакомься, собирай команду,<br/> находи работу мечты <strong>за минуты</strong>, а не месяцы.
           </p>
