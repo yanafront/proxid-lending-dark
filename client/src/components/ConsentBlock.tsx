@@ -67,27 +67,27 @@ export default function ConsentBlock() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-0 left-0 right-0 bg-blue-500/10 border-t border-blue-500/20 p-4 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-blue-600/90 border-t border-blue-500 p-3 z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-start space-x-3 mb-3">
-          <Shield className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+        <div className="flex items-start space-x-3 mb-2">
+          <Shield className="w-5 h-5 text-blue-200 mt-0.5 flex-shrink-0" />
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-blue-400 mb-2">
+            <h3 className="text-base font-semibold text-white mb-1">
               Обработка персональных данных
             </h3>
-            <p className="text-gray-300 text-sm mb-3">
+            <p className="text-blue-100 text-sm mb-2">
               Для использования сервиса ProxiD необходимо согласие на обработку персональных данных. 
               Мы собираем и обрабатываем ваши данные в соответствии с законодательством Республики Беларусь 
               и нашей политикой конфиденциальности.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleConsent}
-                className="bg-blue-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-blue-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
+                className="bg-white text-blue-600 px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-50 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
               >
                 <CheckCircle className="w-4 h-4" />
                 <span>Согласен с обработкой данных</span>
@@ -97,14 +97,14 @@ export default function ConsentBlock() {
                 href="/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-600 px-6 py-3 rounded-md text-sm font-semibold hover:bg-gray-700 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
+                className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-400 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Читать политику</span>
               </a>
             </div>
             
-            <p className="text-gray-400 text-xs mt-2">
+            <p className="text-blue-200 text-xs mt-2">
               Нажимая «Согласен», вы принимаете нашу политику конфиденциальности и даете согласие 
               на обработку персональных данных в соответствии с Законом РБ «О защите персональных данных».
             </p>
