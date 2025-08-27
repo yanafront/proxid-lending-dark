@@ -132,7 +132,7 @@ export default function Hero() {
               data-testid="button-find-project"
               style={{background: 'var(--tw-bg-opacity, 1) var(--tw-bg-opacity, 1) var(--tw-bg-opacity, 1)'}}
             >
-              <Flame className="w-5 h-5 text-orange-500 dark:text-white" />
+              <Flame className="w-5 h-5 text-purple-500 dark:text-white" />
               <span className="text-slate-800 dark:text-white">Найти проект</span>
             </motion.a>
           </div>

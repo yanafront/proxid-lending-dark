@@ -61,24 +61,24 @@
 }
 
 .light {
-  --background: hsl(210, 40%, 98%);
-  --foreground: hsl(220, 15%, 25%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(220, 15%, 25%);
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 15%, 15%);
+  --card: hsl(0, 0%, 98%);
+  --card-foreground: hsl(220, 15%, 15%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(220, 15%, 25%);
+  --popover-foreground: hsl(220, 15%, 15%);
   --primary: hsl(220, 100%, 50%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(220, 15%, 25%);
-  --muted: hsl(210, 40%, 94%);
-  --muted-foreground: hsl(220, 10%, 40%);
-  --accent: hsl(210, 40%, 90%);
-  --accent-foreground: hsl(220, 15%, 25%);
+  --secondary: hsl(220, 15%, 96%);
+  --secondary-foreground: hsl(220, 15%, 15%);
+  --muted: hsl(220, 15%, 94%);
+  --muted-foreground: hsl(220, 15%, 35%);
+  --accent: hsl(220, 15%, 90%);
+  --accent-foreground: hsl(220, 15%, 15%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(210, 40%, 85%);
-  --input: hsl(210, 40%, 96%);
+  --border: hsl(220, 15%, 85%);
+  --input: hsl(220, 15%, 96%);
   --ring: hsl(220, 100%, 50%);
 }
 
@@ -112,6 +112,17 @@ html.light {
   color-scheme: light;
 }
 
+/* Принудительно применяем стили для светлой темы */
+html.light {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+html.light body {
+  background: #fff !important;
+  color: #000 !important;
+}
+
 @layer components {
   .hero-glow {
     background: radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
@@ -127,13 +138,13 @@ html.light {
   /* Специальные стили для кнопки "Найти проект" в темной теме */
   .dark .glass-effect[data-testid="button-find-project"] {
     background: rgba(0, 0, 0, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(147, 51, 234, 0.3);
     color: white;
   }
   
   .dark .glass-effect[data-testid="button-find-project"]:hover {
     background: rgba(0, 0, 0, 0.9);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(147, 51, 234, 0.5);
   }
   
   .dark .glass-effect {
@@ -149,7 +160,8 @@ html.light {
   
   /* Специальные стили для светлой темы */
   .light body {
-    background: linear-gradient(135deg, hsl(210, 40%, 98%) 0%, hsl(210, 30%, 95%) 100%);
+    background: #fff !important;
+    color: #000 !important;
     position: relative;
   }
   
@@ -161,15 +173,15 @@ html.light {
     width: 100%;
     height: 100%;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
   }
   
   .light .hero-glow {
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
   }
   
   .light .text-gradient {
@@ -182,7 +194,7 @@ html.light {
   
   /* Специальные стили для границ в светлой теме */
   .light * {
-    border-color: hsl(210, 40%, 85%) !important;
+    border-color: hsl(220, 15%, 85%) !important;
   }
   
   .light .glass-effect {
@@ -195,7 +207,7 @@ html.light {
   
   /* Дополнительные стили для границ в светлой теме */
   .light input, .light textarea, .light select {
-    border-color: hsl(210, 40%, 80%) !important;
+    border-color: hsl(220, 15%, 80%) !important;
   }
   
   .light input:focus, .light textarea:focus, .light select:focus {
@@ -204,19 +216,74 @@ html.light {
   }
   
   .light button {
-    border-color: hsl(210, 40%, 85%) !important;
+    border-color: hsl(220, 15%, 85%) !important;
   }
   
   .light button:hover {
-    border-color: hsl(210, 40%, 70%) !important;
+    border-color: hsl(220, 15%, 70%) !important;
   }
   
   .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-    color: hsl(220, 15%, 25%);
+    color: #000 !important;
   }
   
   .light p {
-    color: hsl(220, 10%, 40%);
+    color: #333 !important;
+  }
+  
+  .light .text-gray-300 {
+    color: #333 !important;
+  }
+  
+  .light .text-gray-400 {
+    color: #666 !important;
+  }
+  
+  .light .bg-white\/5 {
+    background: rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  .light .bg-white\/10 {
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .light .hover\:bg-white\/10:hover {
+    background: rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .light .hover\:bg-white\/20:hover {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  /* Принудительные стили для навигации в светлой теме */
+  .light .text-white {
+    color: #000 !important;
+  }
+  
+  .light .bg-black {
+    background: #fff !important;
+  }
+  
+  .light .glass-effect {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .light .bg-gradient-to-br {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+  }
+  
+  .light .from-blue-900\/20 {
+    background: rgba(59, 130, 246, 0.05) !important;
+  }
+  
+  .light .via-purple-900\/20 {
+    background: rgba(147, 51, 234, 0.05) !important;
+  }
+  
+  .light .to-pink-900\/20 {
+    background: rgba(236, 72, 153, 0.05) !important;
   }
   
   .light .btn-glow:hover {
@@ -236,16 +303,16 @@ html.light {
   
   /* Специальные стили для кнопки "Найти проект" в светлой теме */
   .light .glass-effect[data-testid="button-find-project"] {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    border: 1px solid rgba(251, 191, 36, 0.3);
-    color: #92400E;
+    background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 100%);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    color: #581C87;
   }
   
   .light .glass-effect[data-testid="button-find-project"]:hover {
-    background: linear-gradient(135deg, #FDE68A 0%, #FCD34D 100%);
-    border-color: rgba(251, 191, 36, 0.5);
+    background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
+    border-color: rgba(147, 51, 234, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
   }
   
   .light .animate-float {
@@ -294,6 +361,7 @@ html.light {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
   }
   
   .text-gradient {
@@ -359,8 +427,8 @@ html.light {
   }
   
   @keyframes glow {
-    0% { box-shadow: 0 0 15px rgba(37, 99, 235, 0.4); }
-    100% { box-shadow: 0 0 25px rgba(37, 99, 235, 0.6); }
+    0% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+    100% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.6); }
   }
   
   @keyframes swipe {

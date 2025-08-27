@@ -1,45 +1,306 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { 
+  Rocket, 
+  Users, 
+  Flame,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
+  Globe,
+  Shield,
+  Video,
+  TrendingUp,
+  Clock
+} from "lucide-react";
 import Navigation from "../components/Navigation";
-import Hero from "../components/Hero";
-import PainPoints from "../components/PainPoints";
-import Solution from "../components/Solution";
-import Benefits from "../components/Benefits";
-import HowItWorks from "../components/HowItWorks";
-// import SocialProof from "../components/SocialProof";
-// import Pricing from "../components/Pricing";
-import FinalCTA from "../components/FinalCTA";
-import ConsentBlock from "../components/ConsentBlock";
 import Footer from "../components/Footer";
+
+const features = [
+  {
+    icon: Zap,
+    title: "AI-матчинг 89% точности",
+    description: "Наш ИИ анализирует требования и навыки, чтобы найти идеальное совпадение"
+  },
+  {
+    icon: Video,
+    title: "Видео-резюме",
+    description: "Видите настоящего человека, его харизму и soft skills"
+  },
+  {
+    icon: Shield,
+    title: "Проверенные участники",
+    description: "Все кандидаты и работодатели проходят верификацию"
+  },
+  {
+    icon: Globe,
+    title: "Глобальный рынок",
+    description: "Работайте с людьми из любой точки мира"
+  }
+];
+
+const stats = [
+  { number: "89%", label: "Точность AI-матчинга" },
+  { number: "3 дня", label: "Среднее время найма" },
+  { number: "70%", label: "Экономия на рекрутинге" },
+  { number: "1000+", label: "Успешных наймов" }
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden pb-32">
+    <>
       <Navigation />
-      <div className="flex flex-col space-y-8 max-w-7xl mx-auto">
-        <div className="w-full px-4 lg:px-0">
-          <Hero />
-        </div>
-        <div className="flex flex-col lg:space-x-8 lg:space-y-0 space-y-8 px-4 lg:px-0">
-          {/* <Pricing /> */}
-          <PainPoints />
-          <Solution />
-        </div>
-        <div className="w-full px-4 lg:px-0">
-          <Benefits />
-        </div>
-        <div className="w-full px-4 lg:px-0">
-          <HowItWorks />
-        </div>
-        {/* <SocialProof /> */}
-        <div className="flex flex-col lg:space-x-8 lg:space-y-0 space-y-8 px-4 lg:px-0">
-          {/* <Pricing /> */}
-          <FinalCTA />
-        </div>
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-black mb-8 leading-tight"
+            >
+              <span className="text-gradient">Мы соединяем -</span><br />
+              <span className="text-2xl md:text-4xl text-gray-300">ты выбираешь</span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto"
+            >
+              Платформа обмена талантами на базе ИИ, где работа и кандидаты находит тебя. 
+              Свайпай, знакомься, собирай команду, находи работу мечты за минуты, а не месяцы.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            >
+              <a
+                href="/candidates"
+                className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3 group"
+              >
+                <Rocket className="w-6 h-6" />
+                <span>Найти сотрудников</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              
+              <a
+                href="/projects"
+                className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3 group"
+              >
+                <Flame className="w-6 h-6" />
+                <span>Найти проект</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">{stat.number}</div>
+                  <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Почему <span className="text-gradient">ProxiD</span>?
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Мы не просто еще один job-сайт. Мы революционизируем процесс найма и поиска работы
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-all"
+                >
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Target Audience Section */}
+        <section className="py-20 relative bg-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Кто вы? <span className="text-gradient">Выберите свой путь</span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                ProxiD работает для обеих сторон рынка труда. Выберите, что вам нужно
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* For Candidates */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-all"
+              >
+                <div className="w-24 h-24 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Rocket className="w-12 h-12 text-blue-400" />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Ищу работу</h3>
+                <p className="text-gray-400 mb-6 text-lg">
+                  Устали от месяцев поиска? Получите предложения от работодателей за 3 дня
+                </p>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>AI-матчинг с точностью 89%</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Видео-резюме для лучшего впечатления</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Прямые контакты с работодателями</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Зарплата выше на 40%</span>
+                  </li>
+                </ul>
+                <a
+                  href="/candidates"
+                  className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all btn-glow group"
+                >
+                  <span>Начать поиск работы</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </motion.div>
+
+              {/* For Employers */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-all"
+              >
+                                  <div className="w-24 h-24 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Flame className="w-12 h-12 text-purple-400" />
+                  </div>
+                <h3 className="text-3xl font-bold mb-4">Ищу специалистов</h3>
+                <p className="text-gray-400 mb-6 text-lg">
+                  Тратите месяцы на поиск? Наймите идеального сотрудника за 1 день
+                </p>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>AI подбирает идеальных кандидатов</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Видео-резюме для оценки soft skills</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Экономия до 70% на рекрутинге</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Быстрый старт проектов</span>
+                  </li>
+                </ul>
+                <a
+                  href="/projects"
+                  className="inline-flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all btn-glow group"
+                >
+                  <span>Найти специалиста</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 relative">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Готовы <span className="text-gradient">изменить рынок труда</span>?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Присоединяйтесь к тысячам пользователей, которые уже нашли работу мечты или идеальных сотрудников
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/candidates"
+                  className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
+                >
+                  <Rocket className="w-6 h-6" />
+                  <span>Найти работу</span>
+                </a>
+                
+                <a
+                  href="/projects"
+                  className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
+                >
+                  <Flame className="w-6 h-6" />
+                  <span>Найти специалиста</span>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
-      <div className="w-full px-4 lg:px-0 max-w-7xl mx-auto">
-        <Footer />
-      </div>
-      <ConsentBlock />
-    </div>
+      <Footer />
+    </>
   );
 }

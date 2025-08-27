@@ -34,35 +34,26 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 bg-blue-600 rounded-sm flex items-center justify-center">
               <span className="text-white font-bold text-lg">P</span>
             </div>
             <span className="text-xl font-bold text-white dark:text-white text-slate-800 dark:text-white">ProxiD</span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("solution")}
+            <a
+              href="/candidates"
               className="text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
-              data-testid="nav-solution"
             >
-              Решение
-            </button>
-            <button
-              onClick={() => scrollToSection("benefits")}
+              Ищу работу
+            </a>
+            <a
+              href="/projects"
               className="text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
-              data-testid="nav-benefits"
             >
-              Преимущества
-            </button>
-            <button
-              onClick={() => scrollToSection("cta")}
-              className="text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors"
-              data-testid="nav-contacts"
-            >
-              Контакты
-            </button>
+              Ищу специалистов
+            </a>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-white/10 hover:bg-white/20 dark:bg-white/10 dark:hover:bg-white/20 bg-blue-100 hover:bg-blue-200 dark:bg-white/10 dark:hover:bg-white/20 transition-colors"
@@ -98,27 +89,18 @@ export default function Navigation() {
           className="md:hidden glass-effect border-t border-white/10 dark:border-white/10 border-blue-200 dark:border-white/10"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <button
-              onClick={() => scrollToSection("solution")}
+            <a
+              href="/candidates"
               className="block px-3 py-2 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors w-full text-left"
-              data-testid="mobile-nav-solution"
             >
-              Решение
-            </button>
-            <button
-              onClick={() => scrollToSection("benefits")}
+              Ищу работу
+            </a>
+            <a
+              href="/projects"
               className="block px-3 py-2 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors w-full text-left"
-              data-testid="mobile-nav-benefits"
             >
-              Преимущества
-            </button>
-            <button
-              onClick={() => scrollToSection("cta")}
-              className="block px-3 py-2 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors w-full text-left"
-              data-testid="mobile-nav-contacts"
-            >
-              Контакты
-            </button>
+              Ищу специалистов
+            </a>
             <button
               onClick={toggleTheme}
               className="flex items-center px-3 py-2 text-gray-300 hover:text-white dark:text-gray-300 dark:hover:text-white text-slate-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-white transition-colors w-full text-left"

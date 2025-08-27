@@ -15,7 +15,7 @@ const painPoints = [
     percentage: "40%",
     title: "Простой сотрудников",
     description: "Время специалистов тратится впустую",
-    color: "text-orange-400",
+    color: "text-purple-400",
     icon: Clock,
   },
   {

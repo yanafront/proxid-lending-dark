@@ -17,6 +17,15 @@ export function useTheme() {
     root.classList.add(theme);
     localStorage.setItem('theme', theme);
     
+    // Принудительно применяем стили для светлой темы
+    if (theme === 'light') {
+      document.body.style.backgroundColor = '#fff';
+      document.body.style.color = '#000';
+    } else {
+      document.body.style.backgroundColor = '';
+      document.body.style.color = '';
+    }
+    
     // Отладочная информация
     console.log('Theme changed to:', theme);
     console.log('HTML classes:', root.classList.toString());
