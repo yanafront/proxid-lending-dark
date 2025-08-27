@@ -178,27 +178,6 @@ export default function Privacy() {
                   </div>
                 </div>
 
-                {/* Контакты */}
-                <div className="pt-6 border-t border-gray-600">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-400">
-                    Контакты для вопросов
-                  </h3>
-                  <p className="text-gray-300">
-                    По всем вопросам, связанным с обработкой персональных данных, обращайтесь:{" "}
-                    <a 
-                      href="https://t.me/yanadubeshko" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-400 hover:text-blue-300 underline"
-                    >
-                      @yanadubeshko
-                    </a>
-                  </p>
-                  <p className="text-gray-300 mt-2">
-                    <strong>Адрес:</strong> Республика Беларусь
-                  </p>
-                </div>
-
                 {/* Кнопка возврата на главную */}
                 <div className="pt-6">
                   <motion.a

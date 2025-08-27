@@ -100,15 +100,15 @@ export default function Solution() {
           >
             <div className="w-full max-w-sm mx-auto">
               {/* Phone Mockup */}
-              <div className="bg-netflix-dark rounded-lg p-6 glass-effect">
-                <div className="bg-netflix-gray rounded-lg p-4 mb-4">
+              <div className="bg-slate-200 dark:bg-netflix-dark rounded-lg p-6 glass-effect">
+                <div className="bg-slate-100 dark:bg-netflix-gray rounded-lg p-4 mb-4">
                   {/* Mock Profile Card */}
                   <div className="text-center mb-4">
                     <div className="w-20 h-20 bg-blue-600 rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-2xl">👨‍💻</span>
                     </div>
-                    <h4 className="font-semibold">Алексей К.</h4>
-                    <p className="text-sm text-gray-400">Senior Frontend Developer</p>
+                    <h4 className="font-semibold text-slate-800 dark:text-white">Алексей К.</h4>
+                    <p className="text-sm text-gray-400 dark:text-gray-400 text-slate-600 dark:text-gray-400">Senior Frontend Developer</p>
                     <div className="flex justify-center items-center mt-2">
                       <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
                         AI Match: 94%
@@ -118,15 +118,15 @@ export default function Solution() {
 
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-400">React, TypeScript</span>
+                      <span className="text-gray-400 dark:text-gray-400 text-slate-600 dark:text-gray-400">React, TypeScript</span>
                       <span className="text-green-400">✓</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">5+ лет опыта</span>
+                      <span className="text-gray-400 dark:text-gray-400 text-slate-600 dark:text-gray-400">5+ лет опыта</span>
                       <span className="text-green-400">✓</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Удаленно</span>
+                      <span className="text-gray-400 dark:text-gray-400 text-slate-600 dark:text-gray-400">Удаленно</span>
                       <span className="text-green-400">✓</span>
                     </div>
                   </div>

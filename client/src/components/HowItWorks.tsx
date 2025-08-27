@@ -13,13 +13,13 @@ const steps = [
     number: "2",
     title: "AI-матчинг",
     description: "Получи точность 89%",
-    gradient: "from-gray-500 to-gray-600",
+    gradient: "from-emerald-500 to-teal-600",
   },
   {
     number: "3",
     title: "Видео-резюме",
     description: "Смотри и принимай решение",
-    gradient: "from-white to-gray-300",
+    gradient: "from-amber-400 to-orange-500",
   },
   {
     number: "4",
