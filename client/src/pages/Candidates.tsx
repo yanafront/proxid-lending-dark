@@ -147,7 +147,7 @@ export default function Candidates() {
                 href="https://t.me/proxiDBot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
+                className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center justify-center space-x-3"
               >
                 <Rocket className="w-6 h-6" />
                 <span>Начать поиск работы</span>
@@ -348,7 +348,7 @@ export default function Candidates() {
                   href="https://t.me/proxiDBot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
+                  className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center justify-center space-x-3"
                 >
                   <Rocket className="w-6 h-6" />
                   <span>Начать поиск работы</span>

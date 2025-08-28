@@ -24,7 +24,7 @@
   --input: hsl(0, 0%, 12%);
   --ring: hsl(220, 100%, 35%);
   --radius: 0.375rem;
-  
+
   /* Netflix-inspired colors */
   --netflix-black: hsl(0, 0%, 0%);
   --netflix-dark: hsl(0, 0%, 8%);
@@ -32,7 +32,7 @@
   --netflix-blue: hsl(220, 100%, 35%);
   --netflix-white: hsl(0, 0%, 100%);
   --netflix-muted: hsl(0, 0%, 60%);
-  
+
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
@@ -58,6 +58,8 @@
   --border: hsl(0, 0%, 20%);
   --input: hsl(0, 0%, 12%);
   --ring: hsl(220, 100%, 35%);
+  --accent-purple: hsl(0, 0%, 90%);
+  --accent-purple-foreground: hsl(0, 0%, 20%);
 }
 
 .light {
@@ -99,6 +101,24 @@
   }
 }
 
+@layer utilities {
+  .bg-accent-purple {
+    background-color: hsl(var(--accent-purple));
+  }
+
+  .text-accent-purple-foreground {
+    color: hsl(var(--accent-purple-foreground));
+  }
+
+  .bg-accent-purple-dark {
+    background-color: hsl(0, 0%, 20%);
+  }
+
+  .hover\:bg-accent-purple-dark:hover {
+    background-color: hsl(0, 0%, 30%);
+  }
+}
+
 /* Принудительно применяем темную тему по умолчанию */
 html {
   color-scheme: dark;
@@ -127,44 +147,44 @@ html.light body {
   .hero-glow {
     background: radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   }
-  
+
   .glass-effect {
     @apply backdrop-blur-sm;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
   }
-  
+
   /* Специальные стили для кнопки "Найти проект" в темной теме */
   .dark .glass-effect[data-testid="button-find-project"] {
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(147, 51, 234, 0.3);
     color: white;
   }
-  
+
   .dark .glass-effect[data-testid="button-find-project"]:hover {
     background: rgba(0, 0, 0, 0.9);
     border-color: rgba(147, 51, 234, 0.5);
   }
-  
+
   .dark .glass-effect {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .light .glass-effect {
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(59, 130, 246, 0.2);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
-  
+
   /* Специальные стили для светлой темы */
   .light body {
     background: #fff !important;
     color: #000 !important;
     position: relative;
   }
-  
+
   .light body::before {
     content: '';
     position: fixed;
@@ -172,18 +192,18 @@ html.light body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
       radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.06) 0%, transparent 50%),
       radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
   }
-  
+
   .light .hero-glow {
     background: radial-gradient(circle at center, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
   }
-  
+
   .light .text-gradient {
     background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
     -webkit-background-clip: text;
@@ -191,171 +211,175 @@ html.light body {
     background-clip: text;
     text-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
   }
-  
+
   /* Специальные стили для границ в светлой теме */
   .light * {
     border-color: hsl(220, 15%, 85%) !important;
   }
-  
+
   .light .glass-effect {
     border-color: rgba(59, 130, 246, 0.2) !important;
   }
-  
+
   .light .card-hover {
     border-color: rgba(59, 130, 246, 0.1) !important;
   }
-  
+
   /* Дополнительные стили для границ в светлой теме */
   .light input, .light textarea, .light select {
     border-color: hsl(220, 15%, 80%) !important;
   }
-  
+
   .light input:focus, .light textarea:focus, .light select:focus {
     border-color: hsl(220, 100%, 50%) !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   }
-  
+
   .light button {
     border-color: hsl(220, 15%, 85%) !important;
   }
-  
+
   .light button:hover {
     border-color: hsl(220, 15%, 70%) !important;
   }
-  
+
   .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
     color: #000 !important;
   }
-  
+
   .light p {
     color: #333 !important;
   }
-  
+
   .light .text-gray-300 {
     color: #333 !important;
   }
-  
+
   .light .text-gray-400 {
     color: #666 !important;
   }
-  
+
   .light .bg-white\/5 {
     background: rgba(0, 0, 0, 0.05) !important;
   }
-  
+
   .light .bg-white\/10 {
     background: rgba(0, 0, 0, 0.1) !important;
   }
-  
+
   .light .hover\:bg-white\/10:hover {
     background: rgba(0, 0, 0, 0.15) !important;
   }
-  
+
   .light .hover\:bg-white\/20:hover {
     background: rgba(0, 0, 0, 0.2) !important;
   }
-  
+
   /* Принудительные стили для навигации в светлой теме */
   .light .text-white {
     color: #000 !important;
+
+    &.logo {
+      color: #fff !important;
+    }
   }
-  
+
   .light .bg-black {
     background: #fff !important;
   }
-  
+
   .light .glass-effect {
     background: rgba(255, 255, 255, 0.9) !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
   }
-  
+
   .light .bg-gradient-to-br {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
   }
-  
+
   .light .from-blue-900\/20 {
     background: rgba(59, 130, 246, 0.05) !important;
   }
-  
+
   .light .via-purple-900\/20 {
     background: rgba(147, 51, 234, 0.05) !important;
   }
-  
+
   .light .to-pink-900\/20 {
     background: rgba(236, 72, 153, 0.05) !important;
   }
-  
+
   .light .btn-glow:hover {
     box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
   }
-  
+
   .light .card-hover:hover {
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
     border-color: rgba(59, 130, 246, 0.3);
   }
-  
+
   .light .card-hover {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(59, 130, 246, 0.1);
     backdrop-filter: blur(10px);
   }
-  
+
   /* Специальные стили для кнопки "Найти проект" в светлой теме */
   .light .glass-effect[data-testid="button-find-project"] {
     background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 100%);
     border: 1px solid rgba(147, 51, 234, 0.3);
     color: #581C87;
   }
-  
+
   .light .glass-effect[data-testid="button-find-project"]:hover {
     background: linear-gradient(135deg, #C084FC 0%, #A855F7 100%);
     border-color: rgba(147, 51, 234, 0.5);
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
   }
-  
+
   .light .animate-float {
     animation: float-light 6s ease-in-out infinite;
   }
-  
+
   .light .animate-glow {
     animation: glow-light 2s ease-in-out infinite alternate;
   }
-  
+
   @keyframes float-light {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
-  
+
   @keyframes glow-light {
     0% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
     100% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.5); }
   }
-  
+
   /* Дополнительные стили для светлой темы */
   .light .glass-effect {
     backdrop-filter: blur(20px);
   }
-  
+
   .light .btn-glow {
     background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
     color: white;
     border: none;
     box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
   }
-  
+
   .light .btn-glow:hover {
     background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.4);
   }
-  
+
   .light .btn-glow:active {
     transform: translateY(0);
     box-shadow: 0 2px 10px 0 rgba(59, 130, 246, 0.3);
   }
-  
+
   .light .text-gradient {
     background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
     -webkit-background-clip: text;
@@ -363,29 +387,29 @@ html.light body {
     background-clip: text;
     text-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
   }
-  
+
   .text-gradient {
     background: linear-gradient(135deg, #2563EB 0%, #FFFFFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .btn-glow {
     transition: all 0.3s ease;
     border-radius: 6px;
   }
-  
+
   .btn-glow:hover {
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
     transform: translateY(-2px);
   }
-  
+
   .card-hover {
     transition: all 0.3s ease;
     border-radius: 6px;
   }
-  
+
   .card-hover:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -396,41 +420,41 @@ html.light body {
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
-  
+
   .animate-swipe {
     animation: swipe 3s ease-in-out infinite;
   }
-  
+
   .parallax-slow {
     transform: translateZ(-1px) scale(2);
   }
-  
+
   .parallax-fast {
     transform: translateZ(1px) scale(0.5);
   }
-  
+
   .preserve-3d {
     transform-style: preserve-3d;
   }
-  
+
   .backface-hidden {
     backface-visibility: hidden;
   }
-  
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
-  
+
   @keyframes glow {
     0% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
     100% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.6); }
   }
-  
+
   @keyframes swipe {
     0% { transform: translateX(-100px); opacity: 0; }
     50% { transform: translateX(0px); opacity: 1; }

@@ -15,12 +15,12 @@ const steps = [
     description: "Получи точность 89%",
     gradient: "from-emerald-500 to-teal-600",
   },
-  {
-    number: "3",
-    title: "Видео-резюме",
-    description: "Смотри и принимай решение",
-    gradient: "from-purple-400 to-pink-500",
-  },
+                 {
+                 number: "3",
+                 title: "Видео-резюме",
+                 description: "Смотри и принимай решение",
+                 gradient: "from-purple-400 to-pink-500 dark:from-white to-gray-300",
+               },
   {
     number: "4",
     title: "Заключай сделку",

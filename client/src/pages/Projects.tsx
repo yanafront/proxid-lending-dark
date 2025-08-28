@@ -147,15 +147,15 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
-              <a
-                href="https://t.me/proxiDBot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
-              >
-                <Flame className="w-6 h-6" />
-                <span>Найти специалиста</span>
-              </a>
+                              <a
+                  href="https://t.me/proxiDBot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-600 dark:bg-white/20 hover:bg-purple-700 dark:hover:bg-white/30 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center justify-center space-x-3"
+                >
+                  <Flame className="w-6 h-6" />
+                  <span>Найти специалиста</span>
+                </a>
               
               <a
                 href="/candidates"
@@ -352,7 +352,7 @@ export default function Projects() {
                   href="https://t.me/proxiDBot"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center space-x-3"
+                  className="bg-purple-600 dark:bg-white/20 hover:bg-purple-700 dark:hover:bg-white/30 px-8 py-4 rounded-lg text-xl font-semibold transition-all btn-glow flex items-center justify-center space-x-3"
                 >
                   <Flame className="w-6 h-6" />
                   <span>Найти специалиста</span>

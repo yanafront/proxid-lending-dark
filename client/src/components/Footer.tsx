@@ -19,7 +19,7 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-blue-600 rounded-sm flex items-center justify-center">
                   <span className="text-white font-bold text-lg">P</span>
                 </div>
-                <span className="text-xl font-bold">ProxiD</span>
+                <span className="text-xl font-bold text-black dark:text-white">ProxiD</span>
               </div>
               <p className="text-gray-400 dark:text-gray-400 text-gray-600 dark:text-gray-400 mb-6 max-w-md">
                 AI-платформа для быстрого и эффективного подбора персонала.
