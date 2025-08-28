@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ConsentBlock from "../components/ConsentBlock";
 import { motion } from "framer-motion";
 
 export default function Privacy() {
@@ -196,6 +197,7 @@ export default function Privacy() {
       </main>
 
       <Footer />
+      <ConsentBlock />
     </div>
   );
 }

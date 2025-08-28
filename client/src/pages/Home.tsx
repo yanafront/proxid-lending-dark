@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ConsentBlock from "../components/ConsentBlock";
 
 const features = [
   {
@@ -54,7 +55,7 @@ export default function Home() {
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-12 sm:py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-sky-900/20" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -224,7 +225,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-white/10 dark:to-gray-300/10 hover:from-purple-500/20 hover:to-pink-500/20 dark:hover:from-white/20 dark:hover:to-gray-300/20 transition-all"
+                className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-sky-500/10 dark:from-white/10 dark:to-gray-300/10 hover:from-purple-500/20 hover:to-sky-500/20 dark:hover:from-white/20 dark:hover:to-gray-300/20 transition-all"
               >
                                   <div className="w-24 h-24 bg-purple-600/20 dark:bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Flame className="w-12 h-12 text-purple-400 dark:text-white" />
@@ -301,6 +302,7 @@ export default function Home() {
         </section>
       </div>
       <Footer />
+      <ConsentBlock />
     </>
   );
 }

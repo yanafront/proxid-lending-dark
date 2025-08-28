@@ -61,6 +61,8 @@ export default function Navigation() {
             >
               {theme === 'dark' ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-blue-600" />}
             </button>
+            
+
             {/*<button*/}
             {/*  onClick={() => scrollToSection("pricing")}*/}
             {/*  className="text-gray-300 hover:text-white transition-colors"*/}

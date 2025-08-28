@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ConsentBlock from "../components/ConsentBlock";
 
 const marketProblems = [
   {
@@ -98,13 +99,13 @@ const howItWorks = [
     number: "3",
     title: "Получаете предложения",
     description: "Работодатели сами выходят на связь с конкретными предложениями",
-    gradient: "from-purple-400 to-pink-500",
+    gradient: "from-purple-400 to-sky-500",
   },
   {
     number: "4",
     title: "Выбираете лучшее",
     description: "Сравниваете условия и выбираете работу, которая действительно подходит",
-    gradient: "from-purple-500 to-pink-600"
+    gradient: "from-purple-500 to-sky-600"
   },
 ];
 
@@ -115,7 +116,7 @@ export default function Candidates() {
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-sky-900/20" />
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
@@ -367,6 +368,7 @@ export default function Candidates() {
         </section>
       </div>
       <Footer />
+      <ConsentBlock />
     </>
   );
 }

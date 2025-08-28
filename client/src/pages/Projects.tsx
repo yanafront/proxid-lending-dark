@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import ConsentBlock from "../components/ConsentBlock";
 
 const marketProblems = [
   {
@@ -102,13 +103,13 @@ const howItWorks = [
     number: "3",
     title: "Получаете готовых кандидатов",
     description: "Кандидаты сами выходят на связь с готовностью начать работу",
-    gradient: "from-purple-400 to-pink-500",
+    gradient: "from-purple-400 to-sky-500",
   },
   {
     number: "4",
     title: "Выбираете лучшего",
     description: "Сравниваете предложения и выбираете специалиста, который действительно подходит",
-    gradient: "from-purple-500 to-pink-600"
+    gradient: "from-purple-500 to-sky-600"
   },
 ];
 
@@ -276,7 +277,7 @@ export default function Projects() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-all"
+                  className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-500/10 to-sky-500/10 hover:from-purple-500/20 hover:to-sky-500/20 transition-all"
                 >
                   <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-green-400" />
@@ -371,6 +372,7 @@ export default function Projects() {
         </section>
       </div>
       <Footer />
+      <ConsentBlock />
     </>
   );
 }

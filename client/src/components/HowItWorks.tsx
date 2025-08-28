@@ -19,7 +19,7 @@ const steps = [
                  number: "3",
                  title: "Видео-резюме",
                  description: "Смотри и принимай решение",
-                 gradient: "from-purple-400 to-pink-500 dark:from-white to-gray-300",
+                 gradient: "from-purple-400 to-sky-500 dark:from-white to-gray-300",
                },
   {
     number: "4",
